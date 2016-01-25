@@ -88,8 +88,6 @@ public class TicTacToe{
 					}
 				}while(!mousePressed || board[row][col] != EMPTY);
 				board[row][col] = X_SHAPE;   // valid move (empty slot)
-				StdDraw.setFont(new Font("SansSerif", Font.PLAIN, 20)); // Font SIZE!
-				//StdDraw.clear(0.5, 0.1, StdDraw.LIGHT_GRAY);
 				StdDraw.setFont(new Font("SansSerif", Font.PLAIN, 64)); // Font SIZE!
 			}
 			else
@@ -120,10 +118,7 @@ public class TicTacToe{
 						col = ComputerRandomPositions[1];
 					}
 				}
-
-				StdDraw.setFont(new Font("SansSerif", Font.PLAIN, 20)); // Font SIZE!
-				StdDraw.text(0.5, 0.1, "         ");
-				StdDraw.setFont(new Font("SansSerif", Font.PLAIN, 64)); // Font SIZE!
+				
 				board[row][col] = O_SHAPE;   // valid move (empty slot)
 				//keep a time of 650ms for the computer to make a move
 				//(helps the player experience feel more authentic).
@@ -132,9 +127,6 @@ public class TicTacToe{
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
-				StdDraw.setFont(new Font("SansSerif", Font.PLAIN, 20)); // Font SIZE!
-				StdDraw.text(0.5, 0.1, "           ");
-				StdDraw.setFont(new Font("SansSerif", Font.PLAIN, 64)); // Font SIZE!
 			}
 
 			// Below: Update screen to reflect board change
@@ -431,15 +423,10 @@ public class TicTacToe{
 	 */
 	public static void displayUserMovePrompt()
 	{
-		/*StdDraw.setFont(new Font("SansSerif", Font.PLAIN, 20)); // Font SIZE!
-		StdDraw.text(0.5, 0.03, "User Move");
-		StdDraw.setFont(new Font("SansSerif", Font.PLAIN, 64)); // Font SIZE!*/
-
 		StdDraw.setFont(new Font("SansSerif", Font.PLAIN, 20)); // Font SIZE!
 		StdDraw.setPenColor(Color.WHITE);
-		//StdDraw.rectangle(0.5, 0.03, 0.2, 0.2);
-		//StdDraw.text(0.5, 0.03, "Comp Move");
 		StdDraw.text(0.5, 0.03, "Comp Move");
+		
 		StdDraw.setPenColor();
 		StdDraw.text(0.5, 0.03, "User Move");
 		StdDraw.setFont(new Font("SansSerif", Font.PLAIN, 64)); // Font SIZE!
@@ -451,15 +438,10 @@ public class TicTacToe{
 	 */
 	public static void displayCompMovePrompt()
 	{
-		/*StdDraw.setFont(new Font("SansSerif", Font.PLAIN, 20)); // Font SIZE!
-		StdDraw.text(0.5, 0.03, "Comp Move");
-		StdDraw.setFont(new Font("SansSerif", Font.PLAIN, 64)); // Font SIZE!*/
-
 		StdDraw.setFont(new Font("SansSerif", Font.PLAIN, 20)); // Font SIZE!
 		StdDraw.setPenColor(Color.WHITE);
-		//StdDraw.rectangle(0.5, 0.03, 0.2, 0.2);
-		//StdDraw.text(0.5, 0.03, "User Move");
 		StdDraw.text(0.5, 0.03, "User Move");
+		
 		StdDraw.setPenColor();
 		StdDraw.text(0.5, 0.03, "Comp Move");
 		StdDraw.setFont(new Font("SansSerif", Font.PLAIN, 64)); // Font SIZE!
